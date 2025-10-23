@@ -1,0 +1,107 @@
+/* style.css - FILE CSS UTAMA YANG MENGANDUNG SEMUA GAYA DAN TAILWIND */
+
+/* 1. Import Tailwind CSS (Wajib agar semua kelas Tailwind berfungsi) */
+@import "tailwindcss";
+
+/* 2. Gaya Dasar dan Kustom Umum */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 3. Gaya Latar Belakang Berpola */
+.textured-background {
+    /* Gaya Light Mode */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLnNvZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8cGF0dGVybiBpZD0iYSIgcGF0dGVybldpZHRoPSIxMCIgcGF0dGVybkhlaWdodD0iMTAiPgogICAgICA8Y2lyY2xlIGlkPSJiIiBjeD0iMS40MTUiIGN5PSIxLjQxNSIgcj0iMS40MTUiIGZpbGw9IiNFQ0VDRTciLz4KICAgIDwvcGF0dGVybj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI0Y4RjcGNTkiLz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+');
+    background-size: 100px;
+    background-repeat: repeat;
+    background-color: #f8f7f6; 
+}
+.dark .textured-background {
+    /* Gaya Dark Mode */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLnNvZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8cGF0dGVybiBpZD0iYSIgcGF0dGVybldpZHRoPSIxMCIgcGF0dGVybkhlaWdodD0iMTAiPgogICAgICA8Y2lyY2xlIGlkPSJiIiBjeD0iMS40MTUiIGN5PSIxLjQxNSIgcj0iMS40MTUiIGZpbGw9IiM0NDM4MjUiLz4KICAgIDwvcGF0dGVybj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzIyMWIxMCIvPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjYSkiIG9wYWNpdHk9IjAuNSIvPgo8L3N2Zz4=');
+    background-color: #221b10; 
+}
+
+/* 4. Gaya Menu Off-Canvas/Hamburger */
+
+.off-canvas-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px; 
+    height: 100%;
+    background-color: #f8f7f6; 
+    color: #443825; 
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 55; 
+    padding: 2rem;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark .off-canvas-menu {
+    background-color: #2e251c; 
+    color: #d3c8b4;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.off-canvas-menu.open {
+    transform: translateX(0);
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 54;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 5. Gaya FAQ (Collapsible) */
+.faq-answer { 
+    max-height: 0; 
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: max-height 0.5s ease-in-out, 
+                padding 0.5s ease-in-out;
+}
+.faq-item.open .chevron { 
+    transform: rotate(180deg);
+}
+
+/* 6. Media Queries untuk Responsif */
+@media (max-width: 767px) {
+    .header-nav-desktop {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1920px) {
+    .header-nav-mobile {
+        display: none !important;
+    }
+}
+
+/* 7. Gaya Tambahan Khusus */
+.icon-contact {
+  height: 2.5rem; 
+  width: 2.5rem; 
+}
+.text-shadow { 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* END OF style.css */
