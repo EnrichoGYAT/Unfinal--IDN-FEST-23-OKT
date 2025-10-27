@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>English Town - Modul A1: Bahasa Inggris Dasar</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" /> 
+    <script src="Learn.js"></script>
+    <script src="menu.js"></script>
+    <script src="theme.js"></script> 
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec9513",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221b10",
+            },
+            fontFamily: {
+              display: ["Lexend", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+          font-family: 'Lexend', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display text-[#443825] dark:text-[#d3c8b4] textured-background transition-colors duration-500"> 
+    <div class="relative min-h-screen w-full overflow-x-hidden">
+       
+      <header class="top-0 z-50 border-b border-primary/20 bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80 sm:px-10 fixed left-0 right-0 transition-colors duration-500">
+        <div class="mx-auto flex max-w-7xl items-center justify-between">
+          
+          <div class="flex items-center gap-3">
+            <img src="logo.png" alt="English Town Logo" class="h-8 w-8 object-contain">
+            <a class="text-xl font-bold tracking-tight text-[#221b10] dark:text-background-light" href="landing-page.html">Elevate Your English</a>
+          </div>
+          
+          <nav class="header-nav-desktop items-center gap-8 md:flex">
+            <a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="landing-page.html">Home</a>
+            <a class="text-sm font-medium text-primary dark:text-primary" href="learn.html">Learn</a> <a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="practice.html">Contact Us</a>
+            <a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="about.html">Games</a>
+          </nav>
+          
+          <div class="flex items-center gap-2">
+            <button id="theme-toggle" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-primary/20 text-[#443825] transition-colors hover:bg-primary/30 dark:bg-primary/20 dark:text-background-light dark:hover:bg-primary/30">
+                </button>
+            <button id="hamburger-btn" class="flex md:hidden h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-primary/20 text-[#443825] transition-colors hover:bg-primary/30 dark:bg-primary/20 dark:text-background-light dark:hover:bg-primary/30">
+                <span class="material-symbols-outlined"> menu </span>
+            </button>
+          </div>
+          
+          </div>
+      </header>
+      
+      <div id="menu-overlay" class="menu-overlay"></div>
+      <nav id="off-canvas-menu" class="off-canvas-menu">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-bold text-primary">Menu</h2>
+            <button id="close-menu-btn" class="h-10 w-10 flex items-center justify-center rounded-full text-[#443825] dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20">
+                <span class="material-symbols-outlined"> close </span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-4 text-xl">
+            <a class="font-medium hover:text-primary dark:hover:text-primary" href="landing-page.html">Home</a>
+            <a class="font-medium text-primary dark:text-primary" href="learn.html">Learn</a>
+            <a class="font-medium hover:text-primary dark:hover:text-primary" href="practice.html">Contact Us</a>
+            <a class="font-medium hover:text-primary dark:hover:text-primary" href="about.html">Games</a>
+        </div>
+      </nav>
+      
+      <main class="mx-auto max-w-7xl px-4 py-10 pt-20 sm:px-10">
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-medium text-primary uppercase tracking-wider">Modul A1</p>
+                <h1 class="text-4xl md:text-5xl font-black text-[#221b10] dark:text-background-light mb-2 mt-2">
+                    Bahasa Inggris Dasar untuk Pemula
+                </h1>
+                <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+                    Ayo mulai belajar dari hal yang paling dasar! Modul ini dirancang untuk mereka yang baru mengenal Bahasa Inggris.
+                </p>
+            </div>
+            
+            <div class="space-y-12">
+                
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        1. Basic Conversation (Percakapan Dasar)
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Dalam melakukan percakapan, ada beberapa kosakata dasar yang perlu diketahui diantaranya:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Hello / Hi</p>
+                            <p class="text-sm">Halo</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">What is your name?</p>
+                            <p class="text-sm">Siapa nama Anda?</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">My name is ____</p>
+                            <p class="text-sm">Nama saya _____</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">How are you?</p>
+                            <p class="text-sm">Apa kabar?</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">I'm fine</p>
+                            <p class="text-sm">Aku baik-baik saja</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">I am from _____</p>
+                            <p class="text-sm">Saya berasal dari _____</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Sorry</p>
+                            <p class="text-sm">Maaf</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Help</p>
+                            <p class="text-sm">Tolong</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Thank you</p>
+                            <p class="text-sm">Terima kasih</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-6 mb-2">Cara Berkenalan</h3>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li>
+                            A: "What is your name?" (Siapa namamu?)
+                        </li>
+                        <li>
+                            B: "My name is [Nama Anda]". (Nama saya [Nama Anda].)
+                        </li>
+                        <li>
+                            A: "Where are you come from?" (Kamu berasal dari mana?)
+                        </li>
+                        <li>
+                            B: "I am from Indonesia." (Saya berasal dari Indonesia.)
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        2. Greetings (Sapaan)
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Salam adalah cara pertama untuk memulai percakapan. Pelajari kata-kata dasar ini (Kosakata Kunci: *Nama, Kebangsaan, Negara, Kota, Usia*):
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Good Morning</p>
+                            <p class="text-sm">Selamat Pagi</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Good Afternoon</p>
+                            <p class="text-sm">Selamat Siang</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Good Evening</p>
+                            <p class="text-sm">Selamat Sore/Malam (Secara Umum)</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Good Night</p>
+                            <p class="text-sm">Selamat Malam/Tidur (Perpisahan sebelum tidur)</p>
+                        </div>
+                        <div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg">
+                            <p class="text-xl font-bold text-primary">Nice to meet you!</p>
+                            <p class="text-sm">Senang bertemu dengan Anda</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-6 mb-2">Cara Berkenalan</h3>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li>A: "Good morning, sir!"</li>
+                        <li>B: "Good morning."</li>
+                        <li>A: "My name is Budi, I am from Indonesia."</li>
+                        <li>B: "Hi Budi! Nice to meet you."</li>
+                      </ul>
+                </section>
+
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        2. Keluarga (Family) dan Teman (Friends)
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Belajar memperkenalkan orang-orang terdekat Anda (Kosakata Kunci: **Mother, father, brother, sister, husband, wife, friend**).</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="bg-gray-100 dark:bg-zinc-800 p-3 rounded-lg">Mother (Ibu)</div>
+                        <div class="bg-gray-100 dark:bg-zinc-800 p-3 rounded-lg">Father (Ayah)</div>
+                        <div class="bg-gray-100 dark:bg-zinc-800 p-3 rounded-lg">Brother (Kakak/Adik Laki-laki)</div>
+                        <div class="bg-gray-100 dark:bg-zinc-800 p-3 rounded-lg">Sister (Kakak/Adik Perempuan)</div>
+                    </div>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Contoh Kalimat</h3>
+                    <p>
+                        This is my **brother**, John. (Ini **saudara laki-laki** saya, John.)
+                    </p>
+                </section>
+                
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        3. Pekerjaan (Jobs) dan Rutinitas Harian
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Bagaimana cara menjelaskan pekerjaan Anda dan rutinitas sehari-hari (Kosakata Kunci: **Teacher, student, wake up, eat, go to work**).</p>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Pekerjaan</h3>
+                    <ul class="list-disc list-inside space-y-1 pl-4">
+                        <li>I am a **student**. (Saya seorang **murid**.)</li>
+                        <li>He is a **teacher**. (Dia seorang **guru**.)</li>
+                    </ul>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Rutinitas</h3>
+                    <p>
+                        I **wake up** at 6 AM. (Saya **bangun** jam 6 pagi.)
+                    </p>
+                </section>
+                
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        4. Tempat (Places) dan Arah Sederhana
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Mendeskripsikan rumah dan lokasi di sekitarnya (Kosakata Kunci: **kitchen, bedroom, table, chair, next to, near**).</p>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Bagian Rumah</h3>
+                    <p>
+                        The **kitchen** is big. (Dapur** itu besar.)
+                    </p>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Arah</h3>
+                    <p>
+                        The park is **near** my house. (Taman itu **dekat** rumah saya.)
+                    </p>
+                </section>
+
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        5. Benda dan Kepemilikan (Possessions)
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Mengenali benda-benda dan cara mengatakan Anda memilikinya (Kosakata Kunci: **book, phone, car, big, small**).</p>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Contoh Kepemilikan (Have)</h3>
+                    <p>
+                        I *have* a new **phone**. (Saya **punya** **ponsel** baru.)
+                    </p>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Sifat Benda</h3>
+                    <p>
+                        This is a **big** **book**. (Ini adalah **buku** yang **besar**.)
+                    </p>
+                </section>
+                
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        6. Waktu, Tanggal, dan Angka (Lanjutan)
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Cara menyebutkan waktu, hari, dan tanggal (Kosakata Kunci: **Mon, Tue, Jan, Feb, Numbers 1-1000**).</p>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Waktu dan Tanggal</h3>
+                    <ul class="list-disc list-inside space-y-1 pl-4">
+                        <li>Today is **Monday**. (Hari ini adalah **Senin**.)</li>
+                        <li>It is **ten o'clock**. (Sekarang **pukul sepuluh**.)</li>
+                    </ul>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Angka Penting</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+                        <div class="bg-gray-100 dark:bg-zinc-800 p-2 rounded">Ten (10)</div>
+                        <div class="bg-gray-100 dark:bg-zinc-800 p-2 rounded">Hundred (100)</div>
+                        <div class="bg-gray-100 dark:bg-zinc-800 p-2 rounded">Thousand (1000)</div>
+                    </div>
+                </section>
+
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        7. Kesukaan dan Ketidaksukaan (Likes & Dislikes)
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Mengungkapkan hobi dan makanan favorit Anda (Kosakata Kunci: **Hobi, tea, coffee, pizza, shirt, pants**).</p>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Ungkapan</h3>
+                    <ul class="list-disc list-inside space-y-1 pl-4">
+                        <li>I **like** reading. (Saya **suka** membaca.)</li>
+                        <li>I **don't like** coffee. (Saya **tidak suka** kopi.)</li>
+                    </ul>
+                </section>
+                
+                <section class="p-6 rounded-xl bg-white dark:bg-[#2e251c] shadow-lg border-l-4 border-primary">
+                    <h2 class="text-2xl font-bold text-[#221b10] dark:text-background-light mb-4">
+                        8. Berbelanja (Shopping) dan Uang (Money)
+                    </h2>
+                    <p class="mb-4 text-base">
+                        Belajar frasa untuk bertanya harga saat berbelanja (Kosakata Kunci: **price, buy, cost, money, cheap, expensive**).</p>
+                    <h3 class="text-xl font-bold mt-6 mb-2">Pertanyaan Belanja</h3>
+                    <ul class="list-disc list-inside space-y-1 pl-4">
+                        <li>**How much** is this? (**Berapa harga** ini?)</li>
+                        <li>It is **cheap**. (Harganya **murah**.)</li>
+                    </ul>
+                </section>
+
+
+              <div class="text-center mt-12">
+                  <a href="learn.html" class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center mx-auto max-w-sm rounded-lg bg-primary px-6 text-base font-bold text-white shadow-lg transition-transform hover:scale-105">
+                      <span class="material-symbols-outlined mr-2"> arrow_back </span>
+                      Kembali ke Daftar Modul
+                  </a>
+              </div>
+              
+          </div>
+          
+      </div>
+
+    </main>
+    
+    <footer class="bg-background-light dark:bg-background-dark mt-auto border-t border-primary/20 transition-colors duration-500">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <p class="text-center text-sm text-zinc-500 dark:text-zinc-400">© 2025 English Town. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

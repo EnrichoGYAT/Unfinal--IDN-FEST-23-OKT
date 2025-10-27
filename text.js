@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   var i = 0;
-  const text = 'Learn English Together with English Town';
+  const text = 'Belajar Bahasa Inggris dengan English Town!';
 
   const typingTextElement = document.getElementById('typing-text');
   const caretElement = document.getElementById('caret');
